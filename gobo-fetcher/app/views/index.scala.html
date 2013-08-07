@@ -1,0 +1,13 @@
+@(list: List[String])
+
+@main("Gobo Fetcher") {
+  <h1>List</h1>
+    @helper.form( action = routes.Application.add ) {
+      <button>Agregar nombre</button>
+    }
+    <ul>
+    @for(item <- list) {
+      <li>@item</li>
+    }
+    </ul>
+}
